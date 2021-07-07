@@ -17,6 +17,8 @@ jobs:
 
       - name: Poetry Setup
         uses: Gr1N/setup-poetry@v5
+
+      - name: Check poetry version
         run: poetry --version
 
       - name: Export Requirements
