@@ -23,3 +23,6 @@ jobs:
 
       - name: Export Requirements
         run: poetry export -f requirements.txt -o requirements.txt --without-hashes
+
+      - name: Check Requirements
+        run: poetry export
