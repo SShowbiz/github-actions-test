@@ -1,0 +1,19 @@
+name: test github actions
+
+on: push
+
+jobs:
+  deploy:
+    strategy:
+      matrix:
+        python-version: [ 3.8 ]
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Poetry Setup
+        uses: Gr1N/setup-poetry@v5
