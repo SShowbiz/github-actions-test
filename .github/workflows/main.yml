@@ -6,7 +6,7 @@ jobs:
   deploy:
     strategy:
       matrix:
-        python-version: [ 3.8 ]
+        python-version: [ 3.8.5 ]
 
     runs-on: ubuntu-latest
     steps:
